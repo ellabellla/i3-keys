@@ -74,7 +74,7 @@ def main():
     args.out.close()
     
     if args.out.name != '<stdout>':
-        webbrowser.open(args.out.name)
+        webbrowser.open_new(args.out.name)
     
 
 
