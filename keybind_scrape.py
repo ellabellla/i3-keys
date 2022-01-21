@@ -2,6 +2,7 @@ import argparse
 import os
 import re
 import markdown
+import webbrowser
 
 def parse_args():
     parser = argparse.ArgumentParser('i3Key Scaper')
@@ -36,6 +37,10 @@ def main():
     html = markdown.markdown('# i3 Keybinds\n'+process_config(args.config))
     args.out.write(html)
     args.out.close()
+    
+    if args.out.name != '<stdout>':
+        webbrowser.open(args.out.name)
+    
     
     
     
