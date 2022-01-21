@@ -11,7 +11,7 @@ def parse_args():
     """parse command line arguments and return an input data and an output stream
 
     Returns:
-        file: file contents
+        config: config file contents
         out: out stream (either stdout or a file)
     """
     parser = argparse.ArgumentParser('i3Key Scaper')
