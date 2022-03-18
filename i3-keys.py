@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
     i3-keys
     
@@ -14,7 +15,7 @@ def parse_args():
         config: config file contents
         out: out stream (either stdout or a file)
     """
-    parser = argparse.ArgumentParser('i3Key Scaper')
+    parser = argparse.ArgumentParser('i3Key Scraper')
     parser.add_argument('-c', '--config', type=argparse.FileType('r'), default=os.path.expanduser('~/.i3/config'))
     parser.add_argument('-o','--out', type=argparse.FileType('w'), default='-')
     
@@ -28,7 +29,7 @@ def parse_args():
     return args
 
 def extract_keybinds(contents):
-    """extract each coomented keybind block to an array
+    """extract each commented keybind block to an array
 
     Args:
         contents (string): contents of the i3 config
